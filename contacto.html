@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta con Go!! Animación. Solicita un diagnóstico gratuito para tu hotel.">
+  <title>Contacto | Go!! Animación</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        GO<span>!!</span> ANIMACIÓN
+      </a>
+      <nav class="nav">
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="soluciones.html">Soluciones</a>
+          <a href="simulador.html">Simulador</a>
+          <a href="contacto.html" class="active">Contacto</a>
+        </div>
+        <a href="contacto.html" class="btn btn-primary btn-sm">Solicitar diagnóstico</a>
+      </nav>
+      <button class="hamburger" aria-label="Menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <!-- CONTACTO -->
+  <section class="section" style="padding-top: calc(var(--header-height) + var(--space-3xl));">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Contacto</span>
+        <h2>Hablemos de tu hotel</h2>
+        <p>Cuéntanos sobre tu establecimiento y te ayudaremos a encontrar la mejor solución de entretenimiento.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); max-width: 1000px; margin: 0 auto;">
+
+        <!-- Formulario -->
+        <div>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="con-nombre">Nombre *</label>
+                <input type="text" id="con-nombre" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="con-apellido">Apellido</label>
+                <input type="text" id="con-apellido" placeholder="Tu apellido">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="con-email">Email *</label>
+              <input type="email" id="con-email" placeholder="tu@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="con-telefono">Teléfono</label>
+              <input type="tel" id="con-telefono" placeholder="+34 ...">
+            </div>
+
+            <div class="form-group">
+              <label for="con-hotel">Nombre del hotel *</label>
+              <input type="text" id="con-hotel" placeholder="Hotel..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="con-interes">¿Qué te interesa?</label>
+              <select id="con-interes">
+                <option value="">Selecciona...</option>
+                <option value="base">Go!! Base</option>
+                <option value="plus">Go!! Plus</option>
+                <option value="integra">Go!! Integra</option>
+                <option value="catering">Catering</option>
+                <option value="azafatas">Azafatas</option>
+                <option value="musica">Música en vivo</option>
+                <option value="magos">Magos</option>
+                <option value="acrobata">Acróbatas</option>
+                <option value="baile">Cuerpo de baile</option>
+                <option value="disco">Disco móviles</option>
+                <option value="barco">Fiestas de barco</option>
+                <option value="turistica">Animación turística</option>
+                <option value="sonorizacion">Sonorización e iluminación</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="con-mensaje">Mensaje</label>
+              <textarea id="con-mensaje" placeholder="Cuéntanos sobre tu hotel y lo que necesitas..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              Enviar mensaje →
+            </button>
+          </form>
+        </div>
+
+        <!-- Info contacto -->
+        <div>
+          <div style="background: var(--color-bg-light); border-radius: var(--radius-lg); padding: var(--space-2xl); margin-bottom: var(--space-xl);">
+            <h3 style="margin-bottom: var(--space-lg);">Información de contacto</h3>
+
+            <div style="display: flex; align-items: flex-start; gap: var(--space-md); margin-bottom: var(--space-lg);">
+              <div style="width: 50px; height: 50px; background: var(--color-primary-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">📧</div>
+              <div>
+                <h4 style="margin-bottom: 2px;">Email</h4>
+                <p style="color: var(--color-text);">info@goanimacion.com</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: var(--space-md); margin-bottom: var(--space-lg);">
+              <div style="width: 50px; height: 50px; background: var(--color-primary-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">📞</div>
+              <div>
+                <h4 style="margin-bottom: 2px;">Teléfono</h4>
+                <p style="color: var(--color-text);">+34 900 000 000</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: var(--space-md); margin-bottom: var(--space-lg);">
+              <div style="width: 50px; height: 50px; background: var(--color-primary-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">📍</div>
+              <div>
+                <h4 style="margin-bottom: 2px;">Ubicación</h4>
+                <p style="color: var(--color-text);">España</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: var(--space-md);">
+              <div style="width: 50px; height: 50px; background: var(--color-primary-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">🕐</div>
+              <div>
+                <h4 style="margin-bottom: 2px;">Horario</h4>
+                <p style="color: var(--color-text);">Lunes - Viernes: 9:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--color-secondary); border-radius: var(--radius-lg); padding: var(--space-2xl); color: white;">
+            <h3 style="color: white; margin-bottom: var(--space-md);">¿Prefieres un diagnóstico rápido?</h3>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-lg);">Haz nuestro simulador de impacto y obtén un informe personalizado en 2 minutos.</p>
+            <a href="simulador.html" class="btn btn-primary">Lanzar simulador →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            GO<span>!!</span> ANIMACIÓN
+          </div>
+          <p>Diseñamos, operamos y optimizamos el ocio hotelero para que el hotel venda mejor, fidelice más y mejore sus reseñas.</p>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="servicios.html#musica">Música y Espectáculos</a></li>
+            <li><a href="servicios.html#espectaculos">Espectáculos</a></li>
+            <li><a href="servicios.html#complementarios">Servicios Complementarios</a></li>
+            <li><a href="soluciones.html">Soluciones Hoteleras</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Herramientas</h4>
+          <ul class="footer-links">
+            <li><a href="simulador.html">Simulador de Impacto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <div class="footer-contact">
+            <p>📧 info@goanimacion.com</p>
+            <p>📞 +34 900 000 000</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Go!! Animación. Todos los derechos reservados.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Volver arriba">↑</button>
+  <script src="js/main.js"></script>
+  <script>
+    // Formulario de contacto
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('con-nombre')?.value.trim();
+      const email = document.getElementById('con-email')?.value.trim();
+      const hotel = document.getElementById('con-hotel')?.value.trim();
+
+      if (!nombre || !email || !hotel) {
+        alert('Por favor, rellena todos los campos obligatorios.');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Por favor, introduce un email válido.');
+        return;
+      }
+
+      // Recoger datos
+      const datos = {
+        nombre,
+        apellido: document.getElementById('con-apellido')?.value.trim() || '',
+        email,
+        telefono: document.getElementById('con-telefono')?.value.trim() || '',
+        hotel,
+        interes: document.getElementById('con-interes')?.value || '',
+        mensaje: document.getElementById('con-mensaje')?.value.trim() || '',
+        fecha: new Date().toISOString(),
+      };
+
+      console.log('Formulario de contacto enviado:', datos);
+
+      // Mostrar confirmación
+      this.innerHTML = `
+        <div style="text-align: center; padding: var(--space-2xl);">
+          <div style="font-size: 3rem; margin-bottom: var(--space-md);">✅</div>
+          <h3 style="margin-bottom: var(--space-md);">¡Mensaje enviado!</h3>
+          <p>Gracias por contactar con nosotros. Te responderemos en un plazo de 24 horas.</p>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

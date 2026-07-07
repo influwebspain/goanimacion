@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Auditoría gratuita de entretenimiento hotelero. Diagnosticamos la situación actual de tu hotel y te enviamos un informe con mejoras.">
+  <title>Auditoría Gratuita | Go!! Animación</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        GO<span>!!</span> ANIMACIÓN
+      </a>
+      <nav class="nav">
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="soluciones.html">Soluciones</a>
+          <a href="simulador.html">Simulador</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <a href="contacto.html" class="btn btn-primary btn-sm">Solicitar diagnóstico</a>
+      </nav>
+      <button class="hamburger" aria-label="Menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <!-- AUDITORÍA -->
+  <section class="section" style="padding-top: calc(var(--header-height) + var(--space-3xl));">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Diagnóstico gratuito</span>
+        <h2>Auditoría de entretenimiento hotelero</h2>
+        <p>Analizamos la situación actual de tu hotel y te enviamos un informe con las principales oportunidades de mejora. Sin compromiso.</p>
+      </div>
+
+      <div class="auditoria-form" id="auditoriaForm">
+        <!-- Formulario -->
+        <div id="auditoriaFormContent">
+          <h3 style="margin-bottom: var(--space-lg);">Cuéntanos sobre tu hotel</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="aud-nombre">Nombre completo *</label>
+              <input type="text" id="aud-nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="aud-email">Email *</label>
+              <input type="email" id="aud-email" placeholder="tu@email.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="aud-hotel">Nombre del hotel *</label>
+              <input type="text" id="aud-hotel" placeholder="Hotel..." required>
+            </div>
+            <div class="form-group">
+              <label for="aud-ubicacion">Ubicación</label>
+              <input type="text" id="aud-ubicacion" placeholder="Ciudad, zona...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="aud-telefono">Teléfono</label>
+            <input type="tel" id="aud-telefono" placeholder="+34 ...">
+          </div>
+
+          <hr style="margin: var(--space-xl) 0; border: none; border-top: 1px solid var(--color-border);">
+
+          <h4 style="margin-bottom: var(--space-lg);">Situación actual</h4>
+
+          <div class="form-group">
+            <label for="aud-tipo">Tipo de establecimiento *</label>
+            <select id="aud-tipo" required>
+              <option value="">Selecciona...</option>
+              <option value="resort">Hotel resort / Todo incluido</option>
+              <option value="vacaciones">Hotel de vacaciones / Familiar</option>
+              <option value="ciudad">Hotel urbano / Ciudad</option>
+              <option value="rural">Hotel rural / Boutique</option>
+              <option value="camping">Camping / Glamping</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="aud-animacion">Estado actual de la animación *</label>
+            <select id="aud-animacion" required>
+              <option value="">Selecciona...</option>
+              <option value="ninguna">No tenemos servicio de animación</option>
+              <option value="basica">Tenemos animación básica (personal interno)</option>
+              <option value="externa">Contratamos animadores externos puntualmente</option>
+              <option value="servicio">Tenemos un servicio de animación contratado</option>
+              <option value="profesional">Tenemos un partner profesional de animación</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="aud-problema">¿Cuál es tu principal preocupación?</label>
+            <textarea id="aud-problema" placeholder="Cuéntanos qué te gustaría mejorar..."></textarea>
+          </div>
+
+          <button class="btn btn-accent btn-lg" id="enviarAuditoria" style="width: 100%;">
+            Solicitar auditoría gratuita →
+          </button>
+        </div>
+
+        <!-- Resultado -->
+        <div id="auditoriaResultado" style="display: none; text-align: center; padding: var(--space-3xl);">
+          <div style="font-size: 4rem; margin-bottom: var(--space-lg);">✅</div>
+          <h3 style="margin-bottom: var(--space-md);">¡Solicitud enviada!</h3>
+          <p style="margin-bottom: var(--space-xl);">Hemos recibido tu solicitud de auditoría gratuita. Nuestro equipo analizará tu hotel y te enviará un informe detallado en un plazo de 48 horas.</p>
+          <p style="margin-bottom: var(--space-xl); color: var(--color-text-secondary);">Mientras tanto, puedes descubrir nuestro <a href="simulador.html" style="color: var(--color-primary); font-weight: 600;">Simulador de Impacto</a> para obtener una estimación inmediata.</p>
+          <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+            <a href="soluciones.html" class="btn btn-secondary">Ver soluciones</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            GO<span>!!</span> ANIMACIÓN
+          </div>
+          <p>Diseñamos, operamos y optimizamos el ocio hotelero para que el hotel venda mejor, fidelice más y mejore sus reseñas.</p>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="servicios.html#musica">Música y Espectáculos</a></li>
+            <li><a href="servicios.html#espectaculos">Espectáculos</a></li>
+            <li><a href="servicios.html#complementarios">Servicios Complementarios</a></li>
+            <li><a href="soluciones.html">Soluciones Hoteleras</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Herramientas</h4>
+          <ul class="footer-links">
+            <li><a href="simulador.html">Simulador de Impacto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <div class="footer-contact">
+            <p>📧 info@goanimacion.com</p>
+            <p>📞 +34 900 000 000</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Go!! Animación. Todos los derechos reservados.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Volver arriba">↑</button>
+  <script src="js/main.js"></script>
+  <script src="js/auditoria.js"></script>
+</body>
+</html>

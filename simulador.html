@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simulador de impacto: descubre cómo el entretenimiento profesional puede transformar la experiencia de tu hotel.">
+  <title>Simulador de Impacto | Go!! Animación</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        GO<span>!!</span> ANIMACIÓN
+      </a>
+      <nav class="nav">
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="soluciones.html">Soluciones</a>
+          <a href="simulador.html" class="active">Simulador</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <a href="contacto.html" class="btn btn-primary btn-sm">Solicitar diagnóstico</a>
+      </nav>
+      <button class="hamburger" aria-label="Menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <!-- SIMULADOR -->
+  <section class="section" style="padding-top: calc(var(--header-height) + var(--space-3xl));">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Simulador gratuito</span>
+        <h2>Descubre el impacto potencial en tu hotel</h2>
+        <p>Responde 6 preguntas y recibe un informe personalizado con las mejoras estimadas en experiencia, reputación y fidelización.</p>
+      </div>
+
+      <div class="simulador-container" id="simulador">
+        <!-- Progress bar -->
+        <div class="simulador-progress">
+          <div class="simulador-progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+
+        <div class="simulador-body">
+
+          <!-- PASO 1: Tipo de hotel -->
+          <div class="simulador-step active" data-step="1">
+            <h3>¿Qué tipo de establecimiento tienes?</h3>
+            <p>Selecciona la opción que mejor describa tu hotel.</p>
+            <div class="simulador-options">
+              <label class="simulador-option">
+                <input type="radio" name="tipo_hotel" value="resort">
+                <span>🏨 Hotel resort / Todo incluido</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="tipo_hotel" value="vacaciones">
+                <span>🏖️ Hotel de vacaciones / Familiar</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="tipo_hotel" value="ciudad">
+                <span>🏙️ Hotel urbano / Ciudad</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="tipo_hotel" value="rural">
+                <span>🌿 Hotel rural / Boutique</span>
+              </label>
+            </div>
+            <div class="simulador-nav">
+              <div></div>
+              <button class="btn btn-primary next-step" disabled>Siguiente →</button>
+            </div>
+          </div>
+
+          <!-- PASO 2: Nº habitaciones -->
+          <div class="simulador-step" data-step="2">
+            <h3>¿Cuántas habitaciones tiene tu hotel?</h3>
+            <p>Una estimación aproximada es suficiente.</p>
+            <div class="simulador-options">
+              <label class="simulador-option">
+                <input type="radio" name="habitaciones" value="pequeño">
+                <span>Menos de 50 habitaciones</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="habitaciones" value="mediano">
+                <span>50 - 150 habitaciones</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="habitaciones" value="grande">
+                <span>150 - 300 habitaciones</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="habitaciones" value="mega">
+                <span>Más de 300 habitaciones</span>
+              </label>
+            </div>
+            <div class="simulador-nav">
+              <button class="btn btn-secondary prev-step">← Anterior</button>
+              <button class="btn btn-primary next-step" disabled>Siguiente →</button>
+            </div>
+          </div>
+
+          <!-- PASO 3: Situación actual -->
+          <div class="simulador-step" data-step="3">
+            <h3>¿Cómo es tu situación actual de animación?</h3>
+            <p>Selecciona la opción que más se parezca a tu realidad.</p>
+            <div class="simulador-options">
+              <label class="simulador-option">
+                <input type="radio" name="situacion" value="ninguna">
+                <span>No tenemos animación organizada</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="situacion" value="basica">
+                <span>Animación básica e interna</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="situacion" value="externa">
+                <span>Contratamos animadores externos</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="situacion" value="profesional">
+                <span>Tenemos servicio profesional de animación</span>
+              </label>
+            </div>
+            <div class="simulador-nav">
+              <button class="btn btn-secondary prev-step">← Anterior</button>
+              <button class="btn btn-primary next-step" disabled>Siguiente →</button>
+            </div>
+          </div>
+
+          <!-- PASO 4: Objetivo principal -->
+          <div class="simulador-step" data-step="4">
+            <h3>¿Cuál es tu objetivo principal?</h3>
+            <p>Elige lo que más te gustaría mejorar.</p>
+            <div class="simulador-options">
+              <label class="simulador-option">
+                <input type="radio" name="objetivo" value="reseñas">
+                <span>📈 Mejorar las reseñas online</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="objetivo" value="fidelizar">
+                <span>❤️ Fidelizar a los huéspedes</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="objetivo" value="diferencia">
+                <span>⭐ Diferenciarme de la competencia</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="objetivo" value="ocupacion">
+                <span>💰 Aumentar la ocupación</span>
+              </label>
+            </div>
+            <div class="simulador-nav">
+              <button class="btn btn-secondary prev-step">← Anterior</button>
+              <button class="btn btn-primary next-step" disabled>Siguiente →</button>
+            </div>
+          </div>
+
+          <!-- PASO 5: Temporada -->
+          <div class="simulador-step" data-step="5">
+            <h3>¿Cuál es tu temporada principal?</h3>
+            <p>Esto nos ayuda a dimensionar el impacto.</p>
+            <div class="simulador-options">
+              <label class="simulador-option">
+                <input type="radio" name="temporada" value="todo_ano">
+                <span>Todo el año</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="temporada" value="verano">
+                <span>Solo verano (junio - septiembre)</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="temporada" value="alta">
+                <span>Alta y media temporada</span>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="temporada" value="irregular">
+                <span>Temporada irregular</span>
+              </label>
+            </div>
+            <div class="simulador-nav">
+              <button class="btn btn-secondary prev-step">← Anterior</button>
+              <button class="btn btn-primary next-step" disabled>Siguiente →</button>
+            </div>
+          </div>
+
+          <!-- PASO 6: Email -->
+          <div class="simulador-step" data-step="6">
+            <h3>Recibe tu informe de impacto</h3>
+            <p>Introduce tus datos y te enviaremos un informe personalizado con las mejoras estimadas para tu hotel.</p>
+            <div class="form-group">
+              <label for="sim-nombre">Nombre *</label>
+              <input type="text" id="sim-nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="sim-email">Email *</label>
+              <input type="email" id="sim-email" placeholder="tu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="sim-hotel">Nombre del hotel</label>
+              <input type="text" id="sim-hotel" placeholder="Hotel...">
+            </div>
+            <div class="simulador-nav">
+              <button class="btn btn-secondary prev-step">← Anterior</button>
+              <button class="btn btn-accent" id="generarInforme" disabled>Generar informe →</button>
+            </div>
+          </div>
+
+          <!-- RESULTADO -->
+          <div class="simulador-step" data-step="resultado" id="resultadoSimulador">
+            <div class="simulador-resultado">
+              <div class="resultado-icon">🎉</div>
+              <h3>Tu informe de impacto está listo</h3>
+              <p style="margin-bottom: var(--space-xl);">Estas son las mejoras estimadas que Go!! Animación puede generar en tu hotel:</p>
+
+              <div class="resultado-metrics">
+                <div class="resultado-metric">
+                  <div class="metric-value" id="metricResenas">+35%</div>
+                  <div class="metric-label">Mejora en reseñas de entretenimiento</div>
+                </div>
+                <div class="resultado-metric">
+                  <div class="metric-value" id="metricSatisfaccion">+28%</div>
+                  <div class="metric-label">Aumento en satisfacción del huésped</div>
+                </div>
+                <div class="resultado-metric">
+                  <div class="metric-value" id="metricFidelizacion">+22%</div>
+                  <div class="metric-label">Mejora en tasa de repetición</div>
+                </div>
+              </div>
+
+              <p style="margin-bottom: var(--space-xl); font-size: 0.9rem; color: var(--color-text-secondary);">* Estimaciones basadas en hoteles similares. Los resultados reales pueden variar.</p>
+
+              <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+                <a href="contacto.html" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+                <a href="soluciones.html" class="btn btn-secondary">Ver soluciones</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            GO<span>!!</span> ANIMACIÓN
+          </div>
+          <p>Diseñamos, operamos y optimizamos el ocio hotelero para que el hotel venda mejor, fidelice más y mejore sus reseñas.</p>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="servicios.html#musica">Música y Espectáculos</a></li>
+            <li><a href="servicios.html#espectaculos">Espectáculos</a></li>
+            <li><a href="servicios.html#complementarios">Servicios Complementarios</a></li>
+            <li><a href="soluciones.html">Soluciones Hoteleras</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Herramientas</h4>
+          <ul class="footer-links">
+            <li><a href="simulador.html">Simulador de Impacto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <div class="footer-contact">
+            <p>📧 info@goanimacion.com</p>
+            <p>📞 +34 900 000 000</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Go!! Animación. Todos los derechos reservados.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Volver arriba">↑</button>
+  <script src="js/main.js"></script>
+  <script src="js/simulador.js"></script>
+</body>
+</html>
