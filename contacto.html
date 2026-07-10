@@ -3,156 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contacta con Go!! Animación. Solicita un diagnóstico gratuito para tu hotel.">
+  <meta name="description" content="Contacta con Go!! Animación. Solicita un diagnóstico gratuito de entretenimiento para tu hotel.">
   <title>Contacto | Go!! Animación</title>
 
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        GO<span>!!</span> ANIMACIÓN
-      </a>
-      <nav class="nav">
-        <div class="nav-links">
-          <a href="index.html">Inicio</a>
-          <a href="servicios.html">Servicios</a>
-          <a href="soluciones.html">Soluciones</a>
-          <a href="simulador.html">Simulador</a>
-          <a href="contacto.html" class="active">Contacto</a>
-        </div>
-        <a href="contacto.html" class="btn btn-primary btn-sm">Solicitar diagnóstico</a>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-mark">G</span><span class="nav-logo-text">Go!! Animación</span></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="soluciones.html" class="nav-link">Soluciones</a>
+        <a href="simulador.html" class="nav-link">Simulador</a>
+        <a href="contacto.html" class="nav-link active">Contacto</a>
       </nav>
-      <button class="hamburger" aria-label="Menú de navegación">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="contacto.html" class="btn btn-primary btn-sm nav-cta">Diagnóstico gratuito</a>
+      <button class="nav-burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
     </div>
   </header>
   <div class="nav-overlay"></div>
 
-  <!-- CONTACTO -->
-  <section class="section" style="padding-top: calc(var(--header-height) + var(--space-3xl));">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">Contacto</span>
-        <h2>Hablemos de tu hotel</h2>
-        <p>Cuéntanos sobre tu establecimiento y te ayudaremos a encontrar la mejor solución de entretenimiento.</p>
-      </div>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <span class="section-eyebrow" style="justify-content:center;">Contacto</span>
+      <h1>Hablemos de <span class="tint">tu hotel</span></h1>
+      <p>Cuéntanos sobre tu establecimiento y te ayudaremos a encontrar la mejor solución de entretenimiento.</p>
+    </div>
+  </section>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); max-width: 1000px; margin: 0 auto;">
+  <!-- CONTACTO -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="contact-grid">
 
         <!-- Formulario -->
-        <div>
-          <form id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="con-nombre">Nombre *</label>
-                <input type="text" id="con-nombre" placeholder="Tu nombre" required>
-              </div>
-              <div class="form-group">
-                <label for="con-apellido">Apellido</label>
-                <input type="text" id="con-apellido" placeholder="Tu apellido">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="con-email">Email *</label>
-              <input type="email" id="con-email" placeholder="tu@email.com" required>
-            </div>
-
-            <div class="form-group">
-              <label for="con-telefono">Teléfono</label>
-              <input type="tel" id="con-telefono" placeholder="+34 ...">
-            </div>
-
-            <div class="form-group">
-              <label for="con-hotel">Nombre del hotel *</label>
-              <input type="text" id="con-hotel" placeholder="Hotel..." required>
-            </div>
-
-            <div class="form-group">
-              <label for="con-interes">¿Qué te interesa?</label>
-              <select id="con-interes">
-                <option value="">Selecciona...</option>
-                <option value="base">Go!! Base</option>
-                <option value="plus">Go!! Plus</option>
-                <option value="integra">Go!! Integra</option>
-                <option value="catering">Catering</option>
-                <option value="azafatas">Azafatas</option>
-                <option value="musica">Música en vivo</option>
-                <option value="magos">Magos</option>
-                <option value="acrobata">Acróbatas</option>
-                <option value="baile">Cuerpo de baile</option>
-                <option value="disco">Disco móviles</option>
-                <option value="barco">Fiestas de barco</option>
-                <option value="turistica">Animación turística</option>
-                <option value="sonorizacion">Sonorización e iluminación</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="con-mensaje">Mensaje</label>
-              <textarea id="con-mensaje" placeholder="Cuéntanos sobre tu hotel y lo que necesitas..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-              Enviar mensaje →
-            </button>
-          </form>
-        </div>
+        <form class="form-card reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group"><label for="con-nombre">Nombre *</label><input type="text" id="con-nombre" placeholder="Tu nombre" required></div>
+            <div class="form-group"><label for="con-apellido">Apellido</label><input type="text" id="con-apellido" placeholder="Tu apellido"></div>
+          </div>
+          <div class="form-group"><label for="con-email">Email *</label><input type="email" id="con-email" placeholder="tu@email.com" required></div>
+          <div class="form-group"><label for="con-telefono">Teléfono</label><input type="tel" id="con-telefono" placeholder="+34 ..."></div>
+          <div class="form-group"><label for="con-hotel">Nombre del hotel *</label><input type="text" id="con-hotel" placeholder="Hotel..." required></div>
+          <div class="form-group">
+            <label for="con-interes">¿Qué te interesa?</label>
+            <select id="con-interes">
+              <option value="">Selecciona...</option>
+              <option value="base">Go!! Base</option>
+              <option value="plus">Go!! Plus</option>
+              <option value="integra">Go!! Integra</option>
+              <option value="musica">Música en vivo</option>
+              <option value="espectaculos">Espectáculos</option>
+              <option value="catering">Catering</option>
+              <option value="turistica">Animación turística</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="con-mensaje">Mensaje</label><textarea id="con-mensaje" placeholder="Cuéntanos sobre tu hotel y lo que necesitas..."></textarea></div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Enviar mensaje →</button>
+        </form>
 
         <!-- Info contacto -->
-        <div>
-          <div style="background: var(--color-bg-light); border-radius: var(--radius-lg); padding: var(--space-2xl); margin-bottom: var(--space-xl);">
-            <h3 style="margin-bottom: var(--space-lg);">Información de contacto</h3>
-
-            <div style="display: flex; align-items: flex-start; gap: var(--space-md); margin-bottom: var(--space-lg);">
-              <div style="width: 50px; height: 50px; background: var(--color-primary-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">📧</div>
-              <div>
-                <h4 style="margin-bottom: 2px;">Email</h4>
-                <p style="color: var(--color-text);">info@goanimacion.com</p>
-              </div>
-            </div>
-
-            <div style="display: flex; align-items: flex-start; gap: var(--space-md); margin-bottom: var(--space-lg);">
-              <div style="width: 50px; height: 50px; background: var(--color-primary-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">📞</div>
-              <div>
-                <h4 style="margin-bottom: 2px;">Teléfono</h4>
-                <p style="color: var(--color-text);">+34 900 000 000</p>
-              </div>
-            </div>
-
-            <div style="display: flex; align-items: flex-start; gap: var(--space-md); margin-bottom: var(--space-lg);">
-              <div style="width: 50px; height: 50px; background: var(--color-primary-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">📍</div>
-              <div>
-                <h4 style="margin-bottom: 2px;">Ubicación</h4>
-                <p style="color: var(--color-text);">España</p>
-              </div>
-            </div>
-
-            <div style="display: flex; align-items: flex-start; gap: var(--space-md);">
-              <div style="width: 50px; height: 50px; background: var(--color-primary-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem;">🕐</div>
-              <div>
-                <h4 style="margin-bottom: 2px;">Horario</h4>
-                <p style="color: var(--color-text);">Lunes - Viernes: 9:00 - 18:00</p>
-              </div>
+        <div class="reveal">
+          <div class="form-card" style="margin-bottom:var(--sp-lg);">
+            <h3 style="margin-bottom:var(--sp-lg);">Información de contacto</h3>
+            <div class="contact-details" style="margin-top:0;">
+              <a href="mailto:info@goanimacion.com" class="contact-detail"><span class="contact-detail-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span>info@goanimacion.com</span></a>
+              <a href="tel:+34900000000" class="contact-detail"><span class="contact-detail-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span><span>+34 900 000 000</span></a>
+              <span class="contact-detail"><span class="contact-detail-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>España · Trabajo nacional</span></span>
+              <span class="contact-detail"><span class="contact-detail-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Lun - Vie: 9:00 - 18:00</span></span>
             </div>
           </div>
-
-          <div style="background: var(--color-secondary); border-radius: var(--radius-lg); padding: var(--space-2xl); color: white;">
-            <h3 style="color: white; margin-bottom: var(--space-md);">¿Prefieres un diagnóstico rápido?</h3>
-            <p style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-lg);">Haz nuestro simulador de impacto y obtén un informe personalizado en 2 minutos.</p>
-            <a href="simulador.html" class="btn btn-primary">Lanzar simulador →</a>
+          <div class="cta-panel">
+            <span class="cta-panel-star">✦</span>
+            <h3 class="cta-panel-title" style="font-size:1.6rem;">¿Prefieres un diagnóstico rápido?</h3>
+            <p class="cta-panel-lead">Haz nuestro simulador de impacto y obtén un informe personalizado en 2 minutos.</p>
+            <a href="simulador.html" class="btn btn-dark">Lanzar simulador →</a>
           </div>
         </div>
 
@@ -163,44 +98,19 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo">
-            GO<span>!!</span> ANIMACIÓN
-          </div>
-          <p>Diseñamos, operamos y optimizamos el ocio hotelero para que el hotel venda mejor, fidelice más y mejore sus reseñas.</p>
+          <a href="index.html" class="nav-logo"><span class="nav-logo-mark">G</span><span class="nav-logo-text">Go!! Animación</span></a>
+          <p class="footer-tagline">Diseñamos, operamos y optimizamos el ocio hotelero para que cada huésped tenga una historia que contar.</p>
+          <div class="footer-social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">fb</a></div>
         </div>
-        <div>
-          <h4>Servicios</h4>
-          <ul class="footer-links">
-            <li><a href="servicios.html#musica">Música y Espectáculos</a></li>
-            <li><a href="servicios.html#espectaculos">Espectáculos</a></li>
-            <li><a href="servicios.html#complementarios">Servicios Complementarios</a></li>
-            <li><a href="soluciones.html">Soluciones Hoteleras</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Herramientas</h4>
-          <ul class="footer-links">
-            <li><a href="simulador.html">Simulador de Impacto</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <div class="footer-contact">
-            <p>📧 info@goanimacion.com</p>
-            <p>📞 +34 900 000 000</p>
-          </div>
-        </div>
+        <div class="footer-col"><h4>Servicios</h4><a href="servicios.html#musica">Música y espectáculos</a><a href="servicios.html#espectaculos">Espectáculos</a><a href="servicios.html#complementarios">Complementarios</a></div>
+        <div class="footer-col"><h4>Soluciones</h4><a href="soluciones.html">Go!! Base</a><a href="soluciones.html">Go!! Plus</a><a href="soluciones.html">Go!! Integra</a></div>
+        <div class="footer-col"><h4>Herramientas</h4><a href="simulador.html">Simulador</a><a href="auditoria.html">Auditoría gratuita</a><a href="contacto.html">Contacto</a></div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Go!! Animación. Todos los derechos reservados.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="#" aria-label="Facebook">fb</a>
-        </div>
+        <p class="footer-copy">&copy; 2026 Go!! Animación. Todos los derechos reservados.</p>
+        <div class="footer-legal"><a href="#">Aviso legal</a><a href="#">Política de privacidad</a></div>
       </div>
     </div>
   </footer>
@@ -208,46 +118,20 @@
   <button class="scroll-top" aria-label="Volver arriba">↑</button>
   <script src="js/main.js"></script>
   <script>
-    // Formulario de contacto
     document.getElementById('contactForm')?.addEventListener('submit', function(e) {
       e.preventDefault();
       const nombre = document.getElementById('con-nombre')?.value.trim();
       const email = document.getElementById('con-email')?.value.trim();
       const hotel = document.getElementById('con-hotel')?.value.trim();
-
-      if (!nombre || !email || !hotel) {
-        alert('Por favor, rellena todos los campos obligatorios.');
-        return;
-      }
-
+      if (!nombre || !email || !hotel) { alert('Por favor, rellena todos los campos obligatorios.'); return; }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert('Por favor, introduce un email válido.');
-        return;
-      }
-
-      // Recoger datos
-      const datos = {
-        nombre,
-        apellido: document.getElementById('con-apellido')?.value.trim() || '',
-        email,
-        telefono: document.getElementById('con-telefono')?.value.trim() || '',
-        hotel,
-        interes: document.getElementById('con-interes')?.value || '',
-        mensaje: document.getElementById('con-mensaje')?.value.trim() || '',
-        fecha: new Date().toISOString(),
-      };
-
-      console.log('Formulario de contacto enviado:', datos);
-
-      // Mostrar confirmación
+      if (!emailRegex.test(email)) { alert('Por favor, introduce un email válido.'); return; }
       this.innerHTML = `
-        <div style="text-align: center; padding: var(--space-2xl);">
-          <div style="font-size: 3rem; margin-bottom: var(--space-md);">✅</div>
-          <h3 style="margin-bottom: var(--space-md);">¡Mensaje enviado!</h3>
+        <div style="text-align:center; padding:var(--sp-2xl);">
+          <div style="font-size:3rem; margin-bottom:var(--sp-md);">✅</div>
+          <h3 style="margin-bottom:var(--sp-md);">¡Mensaje enviado!</h3>
           <p>Gracias por contactar con nosotros. Te responderemos en un plazo de 24 horas.</p>
-        </div>
-      `;
+        </div>`;
     });
   </script>
 </body>

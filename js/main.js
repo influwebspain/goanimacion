@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // === HEADER SCROLL ===
-  const header = document.querySelector('.header');
+  const header = document.querySelector('.navbar');
   const scrollTop = document.querySelector('.scroll-top');
 
   function handleScroll() {
@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // === HAMBURGER MENU ===
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.nav');
+  const hamburger = document.querySelector('.nav-burger');
+  const nav = document.querySelector('.nav-menu');
   const navOverlay = document.querySelector('.nav-overlay');
 
   function toggleNav() {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Close nav on link click
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (nav.classList.contains('active')) {
@@ -112,10 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const sectionId = section.getAttribute('id');
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document.querySelectorAll('.nav-links a').forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            link.classList.toggle('active', href === `#${sectionId}`);
           }
         });
       }
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', highlightNav);
 
   // === COUNTER ANIMATION FOR KPIs ===
-  const kpiNumbers = document.querySelectorAll('.kpi-number');
+  const kpiNumbers = document.querySelectorAll('.kpi-number, .hero-stat-num');
 
   function animateCounter(el) {
     const target = el.getAttribute('data-target');

@@ -3,87 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Auditoría gratuita de entretenimiento hotelero. Diagnosticamos la situación actual de tu hotel y te enviamos un informe con mejoras.">
+  <meta name="description" content="Auditoría gratuita de entretenimiento hotelero. Diagnosticamos la situación actual de tu hotel y te enviamos un informe con oportunidades de mejora.">
   <title>Auditoría Gratuita | Go!! Animación</title>
 
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        GO<span>!!</span> ANIMACIÓN
-      </a>
-      <nav class="nav">
-        <div class="nav-links">
-          <a href="index.html">Inicio</a>
-          <a href="servicios.html">Servicios</a>
-          <a href="soluciones.html">Soluciones</a>
-          <a href="simulador.html">Simulador</a>
-          <a href="contacto.html">Contacto</a>
-        </div>
-        <a href="contacto.html" class="btn btn-primary btn-sm">Solicitar diagnóstico</a>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-mark">G</span><span class="nav-logo-text">Go!! Animación</span></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="soluciones.html" class="nav-link">Soluciones</a>
+        <a href="simulador.html" class="nav-link">Simulador</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
       </nav>
-      <button class="hamburger" aria-label="Menú de navegación">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="contacto.html" class="btn btn-primary btn-sm nav-cta">Diagnóstico gratuito</a>
+      <button class="nav-burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
     </div>
   </header>
   <div class="nav-overlay"></div>
 
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <span class="section-eyebrow" style="justify-content:center;">Diagnóstico gratuito</span>
+      <h1>Auditoría de <span class="tint">entretenimiento</span></h1>
+      <p>Analizamos la situación actual de tu hotel y te enviamos un informe con las principales oportunidades de mejora. Sin compromiso.</p>
+    </div>
+  </section>
+
   <!-- AUDITORÍA -->
-  <section class="section" style="padding-top: calc(var(--header-height) + var(--space-3xl));">
+  <section class="section" style="padding-top:0;">
     <div class="container">
-      <div class="section-header">
-        <span class="badge">Diagnóstico gratuito</span>
-        <h2>Auditoría de entretenimiento hotelero</h2>
-        <p>Analizamos la situación actual de tu hotel y te enviamos un informe con las principales oportunidades de mejora. Sin compromiso.</p>
-      </div>
-
-      <div class="auditoria-form" id="auditoriaForm">
-        <!-- Formulario -->
+      <div class="form-card reveal" id="auditoriaForm" style="max-width:760px; margin:0 auto;">
         <div id="auditoriaFormContent">
-          <h3 style="margin-bottom: var(--space-lg);">Cuéntanos sobre tu hotel</h3>
-
+          <h3 style="margin-bottom:var(--sp-lg);">Cuéntanos sobre tu hotel</h3>
           <div class="form-row">
-            <div class="form-group">
-              <label for="aud-nombre">Nombre completo *</label>
-              <input type="text" id="aud-nombre" placeholder="Tu nombre" required>
-            </div>
-            <div class="form-group">
-              <label for="aud-email">Email *</label>
-              <input type="email" id="aud-email" placeholder="tu@email.com" required>
-            </div>
+            <div class="form-group"><label for="aud-nombre">Nombre completo *</label><input type="text" id="aud-nombre" placeholder="Tu nombre" required></div>
+            <div class="form-group"><label for="aud-email">Email *</label><input type="email" id="aud-email" placeholder="tu@email.com" required></div>
           </div>
-
           <div class="form-row">
-            <div class="form-group">
-              <label for="aud-hotel">Nombre del hotel *</label>
-              <input type="text" id="aud-hotel" placeholder="Hotel..." required>
-            </div>
-            <div class="form-group">
-              <label for="aud-ubicacion">Ubicación</label>
-              <input type="text" id="aud-ubicacion" placeholder="Ciudad, zona...">
-            </div>
+            <div class="form-group"><label for="aud-hotel">Nombre del hotel *</label><input type="text" id="aud-hotel" placeholder="Hotel..." required></div>
+            <div class="form-group"><label for="aud-ubicacion">Ubicación</label><input type="text" id="aud-ubicacion" placeholder="Ciudad, zona..."></div>
           </div>
+          <div class="form-group"><label for="aud-telefono">Teléfono</label><input type="tel" id="aud-telefono" placeholder="+34 ..."></div>
 
-          <div class="form-group">
-            <label for="aud-telefono">Teléfono</label>
-            <input type="tel" id="aud-telefono" placeholder="+34 ...">
-          </div>
-
-          <hr style="margin: var(--space-xl) 0; border: none; border-top: 1px solid var(--color-border);">
-
-          <h4 style="margin-bottom: var(--space-lg);">Situación actual</h4>
-
+          <h4 style="margin:var(--sp-xl) 0 var(--sp-lg);">Situación actual</h4>
           <div class="form-group">
             <label for="aud-tipo">Tipo de establecimiento *</label>
             <select id="aud-tipo" required>
@@ -95,38 +68,29 @@
               <option value="camping">Camping / Glamping</option>
             </select>
           </div>
-
           <div class="form-group">
             <label for="aud-animacion">Estado actual de la animación *</label>
             <select id="aud-animacion" required>
               <option value="">Selecciona...</option>
               <option value="ninguna">No tenemos servicio de animación</option>
-              <option value="basica">Tenemos animación básica (personal interno)</option>
-              <option value="externa">Contratamos animadores externos puntualmente</option>
-              <option value="servicio">Tenemos un servicio de animación contratado</option>
-              <option value="profesional">Tenemos un partner profesional de animación</option>
+              <option value="basica">Animación básica (personal interno)</option>
+              <option value="externa">Animadores externos puntuales</option>
+              <option value="servicio">Servicio de animación contratado</option>
+              <option value="profesional">Partner profesional de animación</option>
             </select>
           </div>
-
-          <div class="form-group">
-            <label for="aud-problema">¿Cuál es tu principal preocupación?</label>
-            <textarea id="aud-problema" placeholder="Cuéntanos qué te gustaría mejorar..."></textarea>
-          </div>
-
-          <button class="btn btn-accent btn-lg" id="enviarAuditoria" style="width: 100%;">
-            Solicitar auditoría gratuita →
-          </button>
+          <div class="form-group"><label for="aud-problema">¿Cuál es tu principal preocupación?</label><textarea id="aud-problema" placeholder="Cuéntanos qué te gustaría mejorar..."></textarea></div>
+          <button class="btn btn-primary btn-lg" id="enviarAuditoria" style="width:100%;">Solicitar auditoría gratuita →</button>
         </div>
 
-        <!-- Resultado -->
-        <div id="auditoriaResultado" style="display: none; text-align: center; padding: var(--space-3xl);">
-          <div style="font-size: 4rem; margin-bottom: var(--space-lg);">✅</div>
-          <h3 style="margin-bottom: var(--space-md);">¡Solicitud enviada!</h3>
-          <p style="margin-bottom: var(--space-xl);">Hemos recibido tu solicitud de auditoría gratuita. Nuestro equipo analizará tu hotel y te enviará un informe detallado en un plazo de 48 horas.</p>
-          <p style="margin-bottom: var(--space-xl); color: var(--color-text-secondary);">Mientras tanto, puedes descubrir nuestro <a href="simulador.html" style="color: var(--color-primary); font-weight: 600;">Simulador de Impacto</a> para obtener una estimación inmediata.</p>
-          <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <div id="auditoriaResultado" style="display:none; text-align:center; padding:var(--sp-3xl) var(--sp-md);">
+          <div style="font-size:4rem; margin-bottom:var(--sp-lg);">✅</div>
+          <h3 style="margin-bottom:var(--sp-md);">¡Solicitud enviada!</h3>
+          <p style="margin-bottom:var(--sp-xl);">Hemos recibido tu solicitud de auditoría gratuita. Nuestro equipo analizará tu hotel y te enviará un informe detallado en un plazo de 48 horas.</p>
+          <p style="margin-bottom:var(--sp-xl); color:var(--text-faint);">Mientras tanto, prueba nuestro <a href="simulador.html" style="color:var(--violet-light); font-weight:600;">Simulador de Impacto</a> para una estimación inmediata.</p>
+          <div style="display:flex; gap:var(--sp-md); justify-content:center; flex-wrap:wrap;">
             <a href="index.html" class="btn btn-primary">Volver al inicio</a>
-            <a href="soluciones.html" class="btn btn-secondary">Ver soluciones</a>
+            <a href="soluciones.html" class="btn btn-ghost">Ver soluciones</a>
           </div>
         </div>
       </div>
@@ -136,44 +100,19 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo">
-            GO<span>!!</span> ANIMACIÓN
-          </div>
-          <p>Diseñamos, operamos y optimizamos el ocio hotelero para que el hotel venda mejor, fidelice más y mejore sus reseñas.</p>
+          <a href="index.html" class="nav-logo"><span class="nav-logo-mark">G</span><span class="nav-logo-text">Go!! Animación</span></a>
+          <p class="footer-tagline">Diseñamos, operamos y optimizamos el ocio hotelero para que cada huésped tenga una historia que contar.</p>
+          <div class="footer-social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">fb</a></div>
         </div>
-        <div>
-          <h4>Servicios</h4>
-          <ul class="footer-links">
-            <li><a href="servicios.html#musica">Música y Espectáculos</a></li>
-            <li><a href="servicios.html#espectaculos">Espectáculos</a></li>
-            <li><a href="servicios.html#complementarios">Servicios Complementarios</a></li>
-            <li><a href="soluciones.html">Soluciones Hoteleras</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Herramientas</h4>
-          <ul class="footer-links">
-            <li><a href="simulador.html">Simulador de Impacto</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <div class="footer-contact">
-            <p>📧 info@goanimacion.com</p>
-            <p>📞 +34 900 000 000</p>
-          </div>
-        </div>
+        <div class="footer-col"><h4>Servicios</h4><a href="servicios.html#musica">Música y espectáculos</a><a href="servicios.html#espectaculos">Espectáculos</a><a href="servicios.html#complementarios">Complementarios</a></div>
+        <div class="footer-col"><h4>Soluciones</h4><a href="soluciones.html">Go!! Base</a><a href="soluciones.html">Go!! Plus</a><a href="soluciones.html">Go!! Integra</a></div>
+        <div class="footer-col"><h4>Herramientas</h4><a href="simulador.html">Simulador</a><a href="auditoria.html">Auditoría gratuita</a><a href="contacto.html">Contacto</a></div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Go!! Animación. Todos los derechos reservados.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="#" aria-label="Facebook">fb</a>
-        </div>
+        <p class="footer-copy">&copy; 2026 Go!! Animación. Todos los derechos reservados.</p>
+        <div class="footer-legal"><a href="#">Aviso legal</a><a href="#">Política de privacidad</a></div>
       </div>
     </div>
   </footer>
