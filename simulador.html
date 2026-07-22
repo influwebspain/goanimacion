@@ -53,21 +53,63 @@
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="simulador-container" id="simulador">
+        <div class="simulador-header">
+          <span class="simulador-step-counter">Paso <span id="stepNum">1</span> de 6</span>
+          <span class="simulador-step-counter" style="font-weight:400; font-size:var(--text-xs); color:var(--text-muted);">Simulador de impacto</span>
+        </div>
         <div class="simulador-progress"><div class="simulador-progress-bar" id="progressBar" style="width:0%"></div></div>
         <div class="simulador-body">
 
+          <!-- PASO 1: TIPO DE HOTEL (con imágenes) -->
           <div class="simulador-step active" data-step="1">
             <h3>¿Qué tipo de establecimiento tienes?</h3>
             <p>Selecciona la opción que mejor describa tu hotel.</p>
             <div class="simulador-options">
-              <label class="simulador-option"><input type="radio" name="tipo_hotel" value="resort"><span>🏨 Hotel resort / Todo incluido</span></label>
-              <label class="simulador-option"><input type="radio" name="tipo_hotel" value="vacaciones"><span>🏖️ Hotel de vacaciones / Familiar</span></label>
-              <label class="simulador-option"><input type="radio" name="tipo_hotel" value="ciudad"><span>🏙️ Hotel urbano / Ciudad</span></label>
-              <label class="simulador-option"><input type="radio" name="tipo_hotel" value="rural"><span>🌿 Hotel rural / Boutique</span></label>
+              <label class="simulador-option">
+                <input type="radio" name="tipo_hotel" value="resort">
+                <div class="simulador-option-media">
+                  <div class="simulador-option-thumb"><img src="img/show7.jpg" alt="Resort" loading="lazy"></div>
+                  <div class="simulador-option-text">
+                    <strong>Hotel resort / Todo incluido</strong>
+                    <span>Grandes instalaciones, animación intensiva</span>
+                  </div>
+                </div>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="tipo_hotel" value="vacaciones">
+                <div class="simulador-option-media">
+                  <div class="simulador-option-thumb"><img src="img/animacion_infantil.jpg" alt="Familiar" loading="lazy"></div>
+                  <div class="simulador-option-text">
+                    <strong>Hotel de vacaciones / Familiar</strong>
+                    <span>Público variado, actividades para todas las edades</span>
+                  </div>
+                </div>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="tipo_hotel" value="ciudad">
+                <div class="simulador-option-media">
+                  <div class="simulador-option-thumb"><img src="img/show4.jpg" alt="Urbano" loading="lazy"></div>
+                  <div class="simulador-option-text">
+                    <strong>Hotel urbano / Ciudad</strong>
+                    <span>Estancias cortas, eventos y restauración</span>
+                  </div>
+                </div>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="tipo_hotel" value="rural">
+                <div class="simulador-option-media">
+                  <div class="simulador-option-thumb"><img src="img/show5.jpg" alt="Rural" loading="lazy"></div>
+                  <div class="simulador-option-text">
+                    <strong>Hotel rural / Boutique</strong>
+                    <span>Experiencias exclusivas, atención personalizada</span>
+                  </div>
+                </div>
+              </label>
             </div>
             <div class="simulador-nav"><div></div><button class="btn btn-primary next-step" disabled>Siguiente →</button></div>
           </div>
 
+          <!-- PASO 2: HABITACIONES -->
           <div class="simulador-step" data-step="2">
             <h3>¿Cuántas habitaciones tiene tu hotel?</h3>
             <p>Una estimación aproximada es suficiente.</p>
@@ -80,6 +122,7 @@
             <div class="simulador-nav"><button class="btn btn-ghost prev-step">← Anterior</button><button class="btn btn-primary next-step" disabled>Siguiente →</button></div>
           </div>
 
+          <!-- PASO 3: SITUACIÓN ACTUAL -->
           <div class="simulador-step" data-step="3">
             <h3>¿Cómo es tu animación actual?</h3>
             <p>Selecciona la opción que más se parezca a tu realidad.</p>
@@ -92,18 +135,56 @@
             <div class="simulador-nav"><button class="btn btn-ghost prev-step">← Anterior</button><button class="btn btn-primary next-step" disabled>Siguiente →</button></div>
           </div>
 
+          <!-- PASO 4: OBJETIVO (con imágenes) -->
           <div class="simulador-step" data-step="4">
             <h3>¿Cuál es tu objetivo principal?</h3>
             <p>Elige lo que más te gustaría mejorar.</p>
             <div class="simulador-options">
-              <label class="simulador-option"><input type="radio" name="objetivo" value="reseñas"><span>📈 Mejorar las reseñas online</span></label>
-              <label class="simulador-option"><input type="radio" name="objetivo" value="fidelizar"><span>❤️ Fidelizar a los huéspedes</span></label>
-              <label class="simulador-option"><input type="radio" name="objetivo" value="diferencia"><span>⭐ Diferenciarme de la competencia</span></label>
-              <label class="simulador-option"><input type="radio" name="objetivo" value="ocupacion"><span>💰 Aumentar la ocupación</span></label>
+              <label class="simulador-option">
+                <input type="radio" name="objetivo" value="reseñas">
+                <div class="simulador-option-media">
+                  <div class="simulador-option-thumb"><img src="img/show1.jpg" alt="Reseñas" loading="lazy"></div>
+                  <div class="simulador-option-text">
+                    <strong>Mejorar las reseñas online</strong>
+                    <span>Impacto directo en la reputación digital</span>
+                  </div>
+                </div>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="objetivo" value="fidelizar">
+                <div class="simulador-option-media">
+                  <div class="simulador-option-thumb"><img src="img/animacion_infantil2.jpg" alt="Fidelizar" loading="lazy"></div>
+                  <div class="simulador-option-text">
+                    <strong>Fidelizar a los huéspedes</strong>
+                    <span>Que vuelvan temporada tras temporada</span>
+                  </div>
+                </div>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="objetivo" value="diferencia">
+                <div class="simulador-option-media">
+                  <div class="simulador-option-thumb"><img src="img/show6.jpg" alt="Diferenciarse" loading="lazy"></div>
+                  <div class="simulador-option-text">
+                    <strong>Diferenciarme de la competencia</strong>
+                    <span>Una propuesta de ocio única y memorable</span>
+                  </div>
+                </div>
+              </label>
+              <label class="simulador-option">
+                <input type="radio" name="objetivo" value="ocupacion">
+                <div class="simulador-option-media">
+                  <div class="simulador-option-thumb"><img src="img/show9.jpg" alt="Ocupación" loading="lazy"></div>
+                  <div class="simulador-option-text">
+                    <strong>Aumentar la ocupación</strong>
+                    <span>Más reservas gracias a una mejor experiencia</span>
+                  </div>
+                </div>
+              </label>
             </div>
             <div class="simulador-nav"><button class="btn btn-ghost prev-step">← Anterior</button><button class="btn btn-primary next-step" disabled>Siguiente →</button></div>
           </div>
 
+          <!-- PASO 5: TEMPORADA -->
           <div class="simulador-step" data-step="5">
             <h3>¿Cuál es tu temporada principal?</h3>
             <p>Esto nos ayuda a dimensionar el impacto.</p>
@@ -116,27 +197,64 @@
             <div class="simulador-nav"><button class="btn btn-ghost prev-step">← Anterior</button><button class="btn btn-primary next-step" disabled>Siguiente →</button></div>
           </div>
 
+          <!-- PASO 6: EMAIL -->
           <div class="simulador-step" data-step="6">
-            <h3>Recibe tu informe de impacto</h3>
-            <p>Introduce tus datos y te enviaremos un informe personalizado.</p>
-            <div class="form-group"><label for="sim-nombre">Nombre *</label><input type="text" id="sim-nombre" placeholder="Tu nombre" required></div>
-            <div class="form-group"><label for="sim-email">Email *</label><input type="email" id="sim-email" placeholder="tu@email.com" required></div>
-            <div class="form-group"><label for="sim-hotel">Nombre del hotel</label><input type="text" id="sim-hotel" placeholder="Hotel..."></div>
-            <div class="simulador-nav"><button class="btn btn-ghost prev-step">← Anterior</button><button class="btn btn-primary" id="generarInforme" disabled>Generar informe →</button></div>
+            <div class="simulador-email-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </div>
+            <h3 style="text-align:center;">Recibe tu informe de impacto</h3>
+            <p style="text-align:center;">Introduce tus datos y te enviaremos un informe personalizado con los resultados.</p>
+            <div style="max-width:400px; margin:0 auto;">
+              <div class="form-group"><label for="sim-nombre">Nombre completo *</label><input type="text" id="sim-nombre" placeholder="Tu nombre" required></div>
+              <div class="form-group"><label for="sim-email">Email profesional *</label><input type="email" id="sim-email" placeholder="tu@email.com" required></div>
+              <div class="form-group"><label for="sim-hotel">Nombre del hotel</label><input type="text" id="sim-hotel" placeholder="Hotel..."></div>
+            </div>
+            <div class="simulador-nav" style="justify-content:center; gap:var(--space-4);">
+              <button class="btn btn-ghost prev-step">← Anterior</button>
+              <button class="btn btn-accent btn-lg" id="generarInforme" disabled>Generar mi informe →</button>
+            </div>
           </div>
 
+          <!-- RESULTADO -->
           <div class="simulador-step" data-step="resultado" id="resultadoSimulador">
             <div class="simulador-resultado">
-              <div class="resultado-icon">🎉</div>
-              <h3>Tu informe de impacto está listo</h3>
-              <p style="margin-bottom:var(--space-6);">Estas son las mejoras estimadas que Go!! Animación puede generar en tu hotel:</p>
-              <div class="resultado-metrics">
-                <div class="resultado-metric"><div class="metric-value" id="metricResenas">+35%</div><div class="metric-label">Mejora en reseñas de entretenimiento</div></div>
-                <div class="resultado-metric"><div class="metric-value" id="metricSatisfaccion">+28%</div><div class="metric-label">Aumento en satisfacción del huésped</div></div>
-                <div class="resultado-metric"><div class="metric-value" id="metricFidelizacion">+22%</div><div class="metric-label">Mejora en tasa de repetición</div></div>
+              <span class="resultado-badge">Informe personalizado</span>
+              <div class="resultado-hero">
+                <div class="resultado-hero-img">
+                  <img src="img/show3.jpg" alt="Resultado" loading="lazy">
+                </div>
+                <div class="resultado-hero-text">
+                  <h3>Tu informe de impacto está listo</h3>
+                  <p>Basado en tus respuestas, estas son las mejoras estimadas que Go!! Animación puede generar en tu hotel.</p>
+                </div>
               </div>
-              <p style="margin-bottom:var(--space-6); font-size:.85rem; color:var(--text-muted);">* Estimaciones basadas en hoteles similares. Los resultados reales pueden variar.</p>
-              <div style="display:flex; gap:var(--space-4); justify-content:center; flex-wrap:wrap;">
+              <div class="resultado-metrics">
+                <div class="resultado-metric">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:24px;height:24px;color:var(--primary);margin-bottom:var(--space-2);"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <div class="metric-value" id="metricResenas">+35%</div>
+                  <div class="metric-label">Mejora en reseñas de entretenimiento</div>
+                  <div class="metric-bar-wrapper"><div class="metric-bar resenas" id="barResenas" style="width:0%"></div></div>
+                </div>
+                <div class="resultado-metric">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:24px;height:24px;color:var(--accent);margin-bottom:var(--space-2);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <div class="metric-value" id="metricSatisfaccion">+28%</div>
+                  <div class="metric-label">Aumento en satisfacción del huésped</div>
+                  <div class="metric-bar-wrapper"><div class="metric-bar satisfaccion" id="barSatisfaccion" style="width:0%"></div></div>
+                </div>
+                <div class="resultado-metric">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:24px;height:24px;color:var(--success);margin-bottom:var(--space-2);"><path d="M20 6L9 17l-5-5"/></svg>
+                  <div class="metric-value" id="metricFidelizacion">+22%</div>
+                  <div class="metric-label">Mejora en tasa de repetición</div>
+                  <div class="metric-bar-wrapper"><div class="metric-bar fidelizacion" id="barFidelizacion" style="width:0%"></div></div>
+                </div>
+              </div>
+              <div class="resultado-recomendacion" id="resultadoRecomendacion">
+                <h4 id="recomendacionTitulo">Te recomendamos Go!! Plus</h4>
+                <p id="recomendacionTexto">Es la solución ideal para tu hotel. Incluye todo lo necesario para transformar tu experiencia de ocio.</p>
+                <a href="contacto.html" class="btn btn-primary btn-sm" id="recomendacionBtn">Solicitar Go!! Plus</a>
+              </div>
+              <p style="margin-top:var(--space-4); font-size:.8rem; color:var(--text-muted);">* Estimaciones basadas en hoteles similares. Los resultados reales pueden variar.</p>
+              <div style="display:flex; gap:var(--space-4); justify-content:center; flex-wrap:wrap; margin-top:var(--space-5);">
                 <a href="contacto.html" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
                 <a href="soluciones.html" class="btn btn-ghost">Ver soluciones</a>
               </div>

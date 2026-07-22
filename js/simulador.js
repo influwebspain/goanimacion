@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const steps = simulador.querySelectorAll('.simulador-step');
   const progressBar = document.getElementById('progressBar');
+  const stepNum = document.getElementById('stepNum');
   const totalSteps = 6; // Pasos totales (5 preguntas + email)
   let currentStep = 0;
 
@@ -22,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Actualizar barra de progreso (cap al 100%)
     const progress = Math.min((stepIndex / totalSteps) * 100, 100);
     progressBar.style.width = `${progress}%`;
+
+    // Actualizar contador de paso
+    if (stepNum) {
+      const displayStep = Math.min(stepIndex + 1, totalSteps);
+      stepNum.textContent = `${displayStep}`;
+    }
 
     // Scroll al top del simulador
     simulador.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -100,10 +107,24 @@ document.addEventListener('DOMContentLoaded', () => {
       // Calcular métricas basadas en respuestas
       const metricas = calcularMetricas(respuestas);
 
-      // Actualizar resultado
+      // Actualizar valores
       document.getElementById('metricResenas').textContent = metricas.resenas;
       document.getElementById('metricSatisfaccion').textContent = metricas.satisfaccion;
       document.getElementById('metricFidelizacion').textContent = metricas.fidelizacion;
+
+      // Actualizar barras de progreso
+      setTimeout(() => {
+        document.getElementById('barResenas').style.width = metricas.resenas;
+        document.getElementById('barSatisfaccion').style.width = metricas.satisfaccion;
+        document.getElementById('barFidelizacion').style.width = metricas.fidelizacion;
+      }, 100);
+
+      // Generar recomendación
+      const recomendacion = generarRecomendacion(respuestas);
+      document.getElementById('recomendacionTitulo').textContent = recomendacion.titulo;
+      document.getElementById('recomendacionTexto').textContent = recomendacion.texto;
+      document.getElementById('recomendacionBtn').textContent = recomendacion.btnText;
+      document.getElementById('recomendacionBtn').href = recomendacion.btnHref;
 
       // Mostrar resultado
       goToStep(steps.length - 1);
@@ -167,9 +188,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const fidelizacion = Math.round(baseFidelizacion * ft * fs * fte);
 
     return {
-      resenas: `+${Math.min(resenas, 60)}%`,
-      satisfaccion: `+${Math.min(satisfaccion, 50)}%`,
-      fidelizacion: `+${Math.min(fidelizacion, 40)}%`,
+      resenas: `${Math.min(resenas, 60)}%`,
+      satisfaccion: `${Math.min(satisfaccion, 50)}%`,
+      fidelizacion: `${Math.min(fidelizacion, 40)}%`,
+    };
+  }
+
+  // === RECOMENDACIÓN PERSONALIZADA ===
+  function generarRecomendacion(respuestas) {
+    // Lógica simple: basada en el tamaño del hotel y situación actual
+    const tamano = respuestas.habitaciones || 'mediano';
+    const situacion = respuestas.situacion || 'basica';
+    const objetivo = respuestas.objetivo || 'reseñas';
+    const tipo = respuestas.tipo_hotel || 'vacaciones';
+
+    // Hoteles pequeños o con situación básica → Base
+    if (tamano === 'pequeño' || situacion === 'ninguna') {
+      return {
+        titulo: 'Te recomendamos Go!! Base',
+        texto: 'Perfecto para hoteles que quieren profesionalizar su animación sin complejidad. Incluye programación, equipo y biblioteca de actividades.',
+        btnText: 'Solicitar Go!! Base',
+        btnHref: 'contacto.html',
+      };
+    }
+
+    // Hoteles medianos o con situación básica → Plus (recomendación por defecto)
+    if (tamano === 'mediano' || situacion === 'basica' || situacion === 'externa') {
+      return {
+        titulo: 'Te recomendamos Go!! Plus',
+        texto: 'La opción más equilibrada. Incluye conceptualización, formación, reportes y optimización continua de la experiencia.',
+        btnText: 'Solicitar Go!! Plus',
+        btnHref: 'contacto.html',
+      };
+    }
+
+    // Hoteles grandes o con servicio profesional → Integra
+    if (tamano === 'grande' || tamano === 'mega' || situacion === 'profesional') {
+      return {
+        titulo: 'Te recomendamos Go!! Integra',
+        texto: 'La solución completa para hoteles que quieren externalizar toda la estrategia de ocio con dashboard, datos y acompañamiento continuo.',
+        btnText: 'Solicitar Go!! Integra',
+        btnHref: 'contacto.html',
+      };
+    }
+
+    // Default
+    return {
+      titulo: 'Te recomendamos Go!! Plus',
+      texto: 'Es la solución ideal para tu hotel. Incluye todo lo necesario para transformar tu experiencia de ocio.',
+      btnText: 'Solicitar Go!! Plus',
+      btnHref: 'contacto.html',
     };
   }
 
