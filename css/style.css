@@ -294,14 +294,24 @@ strong{ color: var(--text); }
 /* === MÓDULOS ADD-ON === */
 .modulos-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-6); }
 .modulo-card{
-  padding:var(--space-6); background:var(--surface);
+  padding:0; overflow:hidden; background:var(--surface);
   border:1px solid var(--border); border-radius:var(--radius-lg);
   transition:all var(--transition-base);
 }
 .modulo-card:hover{ border-color:var(--primary); transform:translateY(-3px); }
-.modulo-card .pilar-icon{ margin-bottom:var(--space-4); }
-.modulo-card h3{ font-size:var(--text-xl); margin-bottom:var(--space-2); }
-.modulo-card p{ font-size:var(--text-sm); }
+.modulo-media{
+  height:140px; overflow:hidden; position:relative;
+}
+.modulo-media img{
+  width:100%; height:100%; object-fit:cover;
+  transition: transform var(--transition-slow);
+}
+.modulo-card:hover .modulo-media img{ transform:scale(1.05); }
+.modulo-body{
+  padding:var(--space-4) var(--space-5) var(--space-5);
+}
+.modulo-body h3{ font-size:var(--text-xl); margin-bottom:var(--space-2); }
+.modulo-body p{ font-size:var(--text-sm); margin:0; }
 
 /* ¿CÓMO LO HACEMOS? — Process */
 .process-grid{
