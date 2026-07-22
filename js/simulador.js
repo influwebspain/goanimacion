@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const steps = simulador.querySelectorAll('.simulador-step');
   const progressBar = document.getElementById('progressBar');
-  const totalSteps = 5; // Pasos de pregunta (no cuenta email ni resultado)
+  const totalSteps = 6; // Pasos totales (5 preguntas + email)
   let currentStep = 0;
 
   // === NAVEGACIÓN ENTRE PASOS ===
@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     steps[stepIndex].classList.add('active');
     currentStep = stepIndex;
 
-    // Actualizar barra de progreso
-    const progress = (stepIndex / totalSteps) * 100;
+    // Actualizar barra de progreso (cap al 100%)
+    const progress = Math.min((stepIndex / totalSteps) * 100, 100);
     progressBar.style.width = `${progress}%`;
 
     // Scroll al top del simulador
@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('metricFidelizacion').textContent = metricas.fidelizacion;
 
       // Mostrar resultado
-      progressBar.style.width = '100%';
       goToStep(steps.length - 1);
     });
   }

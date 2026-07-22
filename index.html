@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Go!! Animación · Partner estratégico de entretenimiento hotelero. Diseñamos, operamos y optimizamos el ocio de tu hotel para que venda mejor, fidelice más y mejore sus reseñas. +250 hoteles, +20 años.">
   <meta name="keywords" content="animación hotelera, entretenimiento hotelero, ocio hotelero, animación para hoteles, Go Animación, estrategia de ocio hotel">
+  <meta property="og:title" content="Go!! Animación | Entretenimiento Hotelero Estratégico">
+  <meta property="og:description" content="Diseñamos, operamos y optimizamos el ocio de tu hotel. +250 hoteles, +20 años de experiencia.">
+  <meta property="og:image" content="img/show7.jpg">
+  <meta property="og:type" content="website">
   <title>Go!! Animación | Entretenimiento Hotelero Estratégico</title>
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -37,105 +43,175 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-bg">
+      <img src="img/show7.jpg" alt="Espectáculo Go!! Animación" loading="lazy">
+    </div>
     <div class="container hero-container">
-      <div class="hero-topbar">
+      <div class="hero-content">
         <span class="hero-eyebrow">Entretenimiento hotelero</span>
-        <span class="hero-avail"><span class="hero-avail-dot"></span>Reservas temporada 2026</span>
-      </div>
-
-      <div class="hero-grid">
-        <div class="hero-text">
-          <h1 class="hero-title">
-            <span class="line">Creamos</span>
-            <span class="line tint">experiencias</span>
-            <span class="line">que tu hotel</span>
-            <span class="script">vende mejor</span>
-          </h1>
-          <p class="hero-sub">Diseñamos, operamos y optimizamos el ocio de tu hotel para que cada estancia se convierta en un recuerdo — y en una mejor reseña.</p>
-          <p class="hero-code">// Diseño · Operación · Datos</p>
-          <div class="hero-actions">
-            <a href="soluciones.html" class="btn btn-primary btn-lg">Ver soluciones</a>
-            <a href="simulador.html" class="btn btn-ghost btn-lg">Probar simulador</a>
-          </div>
-        </div>
-
-        <div class="hero-media">
-          <div class="hero-portrait">
-            <div class="hero-portrait-img" style="background-image:url('img/hero-main.jpg');"></div>
-            <span class="hero-badge"><span class="hero-avail-dot"></span>Partner estratégico</span>
-            <span class="hero-monogram">G!!</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-num" data-target="250+">0</div>
-          <div class="hero-stat-label">Hoteles en cartera</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num" data-target="1500+">0</div>
-          <div class="hero-stat-label">Animadores en temporada</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num" data-target="1000+">0</div>
-          <div class="hero-stat-label">Actividades en biblioteca</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num" data-target="20+">0</div>
-          <div class="hero-stat-label">Años de experiencia</div>
+        <h1 class="hero-title">
+          Creamos experiencias<br>que tu hotel <span class="tint">vende mejor</span>
+        </h1>
+        <p class="hero-sub">Diseñamos, operamos y optimizamos el ocio de tu hotel para que cada estancia se convierta en un recuerdo — y en una mejor reseña.</p>
+        <div class="hero-actions">
+          <a href="soluciones.html" class="btn btn-accent btn-lg">Ver soluciones</a>
+          <a href="simulador.html" class="btn btn-light btn-lg">Probar simulador</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHAT WE DO -->
-  <section class="section" id="enfoque">
+  <!-- CLIENTES -->
+  <section class="clients-strip">
     <div class="container">
-      <div class="whatido-grid reveal">
-        <div class="whatido-intro">
-          <span class="section-eyebrow">Qué hacemos</span>
-          <h2>Un sistema<br>de ocio,<br>no horas<br>sueltas</h2>
-          <p>Integramos creatividad, operación profesional y datos en una sola propuesta medible.</p>
+      <h3>Confían en nosotros</h3>
+      <div class="clients-grid">
+        <span class="client-item">Hotel Solaris</span>
+        <span class="client-item">Grupo Costa Brava</span>
+        <span class="client-item">Zenith Urban</span>
+        <span class="client-item">Resort Azul</span>
+        <span class="client-item">Cadena Hotelera Sol</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR CTA (SPLIT) -->
+  <section class="section">
+    <div class="container">
+      <div class="split-grid reveal">
+        <div class="split-media aspect-4-3">
+          <img src="img/show4.jpg" alt="Simulador de impacto" loading="lazy">
         </div>
-        <div class="whatido-card">
-          <div class="whatido-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <h3>Experiencia</h3>
-          <p>Actividades y espectáculos diseñados para generar recuerdo y satisfacción del huésped.</p>
-          <div class="whatido-num">01</div>
+        <div class="split-text">
+          <span class="section-eyebrow">Simulador gratuito</span>
+          <h2>Descubre el impacto<br>en tu hotel</h2>
+          <p>Responde 6 preguntas sobre tu hotel y recibe una estimación del impacto potencial en ocupación, satisfacción y reputación online.</p>
+          <a href="simulador.html" class="btn btn-primary btn-lg">Lanzar simulador →</a>
         </div>
-        <div class="whatido-card">
-          <div class="whatido-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 7h-9M14 17H5M17 3v8M7 13v8"/><circle cx="17" cy="7" r="2.2"/><circle cx="7" cy="17" r="2.2"/></svg>
-          </div>
-          <h3>Operación</h3>
-          <p>Procesos, equipos y estándares de calidad que garantizan consistencia en cada temporada.</p>
-          <div class="whatido-num">02</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUCIONES -->
+  <section class="section section-alt" id="soluciones">
+    <div class="container">
+      <div class="section-head-row">
+        <div class="section-header" style="margin-bottom:0;">
+          <span class="section-eyebrow">Soluciones</span>
+          <h2 class="section-title">El plan adecuado para cada hotel</h2>
+          <p class="section-lead">Tres niveles de servicio que escalan contigo: desde profesionalizar la animación hasta externalizar toda la estrategia de ocio.</p>
         </div>
-        <div class="whatido-card">
-          <div class="whatido-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-          </div>
-          <h3>Datos</h3>
-          <p>Medimos participación, satisfacción y reputación para optimizar cada decisión.</p>
-          <div class="whatido-num">03</div>
+        <a href="soluciones.html" class="section-link">Ver todos los planes →</a>
+      </div>
+      <div class="plans-grid mt-2xl">
+        <div class="plan-card reveal">
+          <span class="plan-badge">Esencial</span>
+          <h3>Go!! Base</h3>
+          <p class="plan-tagline">Para hoteles que quieren profesionalizar la animación sin complejidad.</p>
+          <ul class="plan-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Programación y equipo asignado</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Actividades y calendario semanal</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Biblioteca de +1.000 actividades</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Soporte operativo continuo</li>
+          </ul>
+          <a href="contacto.html" class="btn btn-ghost">Solicitar Go!! Base</a>
         </div>
-        <div class="whatido-card">
-          <div class="whatido-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <div class="plan-card featured reveal">
+          <span class="plan-badge">Más popular</span>
+          <h3>Go!! Plus</h3>
+          <p class="plan-tagline">Para hoteles que quieren mejorar experiencia y reputación.</p>
+          <ul class="plan-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Todo lo de Go!! Base</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Conceptualización y formación</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Reportes y optimización</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Indicadores de satisfacción</li>
+          </ul>
+          <a href="contacto.html" class="btn btn-primary">Solicitar Go!! Plus</a>
+        </div>
+        <div class="plan-card reveal">
+          <span class="plan-badge">Completa</span>
+          <h3>Go!! Integra</h3>
+          <p class="plan-tagline">Para hoteles que quieren externalizar la estrategia completa de ocio.</p>
+          <ul class="plan-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Gestión integral y presupuestos</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Selección y formación de equipo</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Dashboard de rendimiento</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Acompañamiento continuo</li>
+          </ul>
+          <a href="contacto.html" class="btn btn-ghost">Solicitar Go!! Integra</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO LO HACEMOS -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <div class="section-header text-center" style="margin:0 auto var(--space-12);">
+        <span class="section-eyebrow">Cómo lo hacemos</span>
+        <h2 class="section-title">De la estrategia al resultado</h2>
+        <p class="section-lead" style="margin:0 auto;">Un proceso probado que convierte el ocio de tu hotel en una ventaja competitiva medible.</p>
+      </div>
+      <div class="process-grid reveal">
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-step-num">01</div>
+            <div>
+              <h4>Diagnóstico</h4>
+              <p>Analizamos tu hotel, tu huésped y tu reputación actual para identificar oportunidades.</p>
+            </div>
           </div>
-          <h3>Reputación</h3>
-          <p>Convertimos cada momento memorable en mejores reseñas y más fidelización.</p>
-          <div class="whatido-num">04</div>
+          <div class="process-step">
+            <div class="process-step-num">02</div>
+            <div>
+              <h4>Propuesta a medida</h4>
+              <p>Solución con objetivos claros, presupuesto transparente y KPIs de éxito definidos.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">03</div>
+            <div>
+              <h4>Operación</h4>
+              <p>Ejecutamos con reporting mensual, ajustes en tiempo real y mejora continua.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">04</div>
+            <div>
+              <h4>Optimización</h4>
+              <p>Medimos impacto e iteramos para superar cada temporada con datos reales.</p>
+            </div>
+          </div>
+        </div>
+        <div class="process-media">
+          <img src="img/show5.jpg" alt="Proceso Go!! Animación" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATOS CLAVE -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="kpi-grid reveal">
+        <div class="kpi-item">
+          <div class="kpi-number" data-target="250+">0</div>
+          <div class="kpi-label">Hoteles en cartera</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-number" data-target="1500+">0</div>
+          <div class="kpi-label">Animadores en temporada</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-number" data-target="1000+">0</div>
+          <div class="kpi-label">Actividades en biblioteca</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SERVICIOS -->
-  <section class="section section-alt" id="servicios">
+  <section class="section" id="servicios">
     <div class="container">
       <div class="section-head-row">
         <div class="section-header" style="margin-bottom:0;">
@@ -147,7 +223,9 @@
       </div>
       <div class="cards-3 mt-2xl">
         <div class="svc-card reveal">
-          <div class="svc-card-media svc-media-1"></div>
+          <div class="svc-card-media">
+            <img src="img/show1.jpg" alt="Espectáculos y shows" loading="lazy">
+          </div>
           <div class="svc-card-body">
             <h3>Espectáculos &amp; shows</h3>
             <p>Producciones profesionales de magia, acrobacia, danza y música en directo para todo tipo de público.</p>
@@ -160,7 +238,9 @@
           </div>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card-media svc-media-2"></div>
+          <div class="svc-card-media">
+            <img src="img/animacion_infantil.jpg" alt="Animación y actividades" loading="lazy">
+          </div>
           <div class="svc-card-body">
             <h3>Animación &amp; actividades</h3>
             <p>+1.000 actividades en biblioteca permanente, siempre alineadas con el perfil de tu huésped.</p>
@@ -173,7 +253,9 @@
           </div>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card-media svc-media-3"></div>
+          <div class="svc-card-media">
+            <img src="img/show9.jpg" alt="Consultoría y data" loading="lazy">
+          </div>
           <div class="svc-card-body">
             <h3>Consultoría &amp; data</h3>
             <p>Medimos cada actividad y cada reseña para optimizar tu reputación online y tu ocupación.</p>
@@ -189,92 +271,21 @@
     </div>
   </section>
 
-  <!-- CASOS -->
-  <section class="section" id="casos">
+  <!-- GALERÍA DE SHOWS -->
+  <section class="section section-alt" id="galeria">
     <div class="container">
-      <div class="section-head-row">
-        <div class="section-header" style="margin-bottom:0;">
-          <span class="section-eyebrow">Casos de éxito</span>
-          <h2 class="section-title">Hoteles que transformaron su ocio</h2>
-        </div>
-        <a href="contacto.html" class="section-link">Trabajemos juntos →</a>
+      <div class="section-header">
+        <span class="section-eyebrow">Galería</span>
+        <h2 class="section-title">Experiencias que hablan por sí solas</h2>
+        <p class="section-lead">Así vivieron nuestros shows y actividades los huéspedes de nuestros hoteles.</p>
       </div>
-      <div class="proj-grid mt-2xl">
-        <div class="proj-card reveal">
-          <div class="proj-media proj-media-1">
-            <span class="proj-num">01</span>
-            <span class="proj-arrow">↗</span>
-          </div>
-          <div class="proj-body">
-            <span class="proj-tag">Resort · Todo Incluido</span>
-            <h3>Hotel Solaris</h3>
-            <p>Rediseño de espectáculos nocturnos para resort 5★ en el Caribe. Reseñas de entretenimiento +40%.</p>
-          </div>
-        </div>
-        <div class="proj-card reveal">
-          <div class="proj-media proj-media-2">
-            <span class="proj-num">02</span>
-            <span class="proj-arrow">↗</span>
-          </div>
-          <div class="proj-body">
-            <span class="proj-tag">Cadena hotelera</span>
-            <h3>Grupo Costa Brava</h3>
-            <p>Programación integral para 12 hoteles. Estandarización de calidad y mejora continua.</p>
-          </div>
-        </div>
-        <div class="proj-card reveal">
-          <div class="proj-media proj-media-3">
-            <span class="proj-num">03</span>
-            <span class="proj-arrow">↗</span>
-          </div>
-          <div class="proj-body">
-            <span class="proj-tag">Boutique Hotel</span>
-            <h3>Zenith Urban</h3>
-            <p>Área de experiencia del huésped: agendas, check-in personalizado y feedback en tiempo real.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOOLKIT + PROCESO + CTA -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="split-3">
-        <!-- Toolkit -->
-        <div class="panel reveal">
-          <h3 class="panel-title">Nuestro kit</h3>
-          <div class="toolkit-grid">
-            <div class="tool-chip"><div class="tool-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><span>Música</span></div>
-            <div class="tool-chip"><div class="tool-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><span>Shows</span></div>
-            <div class="tool-chip"><div class="tool-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><span>Talleres</span></div>
-            <div class="tool-chip"><div class="tool-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0114 0v1"/></svg></div><span>Equipos</span></div>
-            <div class="tool-chip"><div class="tool-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><span>Data</span></div>
-            <div class="tool-chip"><div class="tool-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div><span>Eventos</span></div>
-            <div class="tool-chip"><div class="tool-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg></div><span>Fiestas</span></div>
-            <div class="tool-chip"><div class="tool-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3l-4 4-4-4"/></svg></div><span>Catering</span></div>
-            <div class="tool-chip"><div class="tool-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><span>Reporting</span></div>
-          </div>
-        </div>
-
-        <!-- Proceso -->
-        <div class="panel reveal" id="proceso">
-          <h3 class="panel-title">Cómo trabajamos</h3>
-          <div class="proc-steps">
-            <div class="proc-step"><div class="proc-step-num">01</div><div><h4>Diagnóstico</h4><p>Analizamos tu hotel, tu huésped y tu reputación actual.</p></div></div>
-            <div class="proc-step"><div class="proc-step-num">02</div><div><h4>Propuesta a medida</h4><p>Solución con objetivos claros, presupuesto y KPIs de éxito.</p></div></div>
-            <div class="proc-step"><div class="proc-step-num">03</div><div><h4>Operación</h4><p>Ejecutamos con reporting mensual y ajustes en tiempo real.</p></div></div>
-            <div class="proc-step"><div class="proc-step-num">04</div><div><h4>Optimización</h4><p>Medimos impacto e iteramos para superar cada temporada.</p></div></div>
-          </div>
-        </div>
-
-        <!-- CTA panel -->
-        <div class="cta-panel reveal">
-          <span class="cta-panel-star">✦</span>
-          <h3 class="cta-panel-title">Construyamos algo memorable</h3>
-          <p class="cta-panel-lead">Diagnóstico gratuito y sin compromiso. Te mostramos exactamente cómo transformar el ocio de tu hotel.</p>
-          <a href="contacto.html" class="btn btn-dark btn-lg">Empezar ahora ↗</a>
-        </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal"><img src="img/show2.jpg" alt="Show Go!! Animación" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show3.jpg" alt="Show Go!! Animación" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show6.jpg" alt="Show Go!! Animación" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show8.jpg" alt="Show Go!! Animación" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show11.jpg" alt="Show Go!! Animación" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show12.jpg" alt="Show Go!! Animación" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -331,6 +342,21 @@
     </div>
   </section>
 
+  <!-- CTA FINAL -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-panel reveal">
+        <span class="cta-panel-star">✦</span>
+        <h3 class="cta-panel-title">Construyamos algo memorable</h3>
+        <p class="cta-panel-lead">Diagnóstico gratuito y sin compromiso. Te mostramos exactamente cómo transformar el ocio de tu hotel y mejorar tus resultados.</p>
+        <div style="display:flex; gap:var(--space-4); justify-content:center; flex-wrap:wrap;">
+          <a href="contacto.html" class="btn btn-dark btn-lg">Empezar ahora ↗</a>
+          <a href="simulador.html" class="btn btn-light btn-lg">Probar simulador</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACTO -->
   <section class="section" id="contacto">
     <div class="container">
@@ -354,7 +380,7 @@
             </span>
           </div>
         </div>
-        <form class="form-card reveal" action="#" method="POST">
+        <form class="form-card reveal" id="contactForm" action="#" method="POST">
           <div class="form-row">
             <div class="form-group"><label for="name">Nombre completo</label><input type="text" id="name" name="name" placeholder="Ej. María García" required></div>
             <div class="form-group"><label for="hotel">Hotel / Empresa</label><input type="text" id="hotel" name="hotel" placeholder="Ej. Hotel Solaris" required></div>

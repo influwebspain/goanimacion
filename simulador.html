@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Simulador de impacto de Go!! Animación: responde 6 preguntas sobre tu hotel y recibe una estimación del impacto en reseñas, satisfacción y fidelización.">
+  <meta property="og:title" content="Simulador de Impacto | Go!! Animación">
+  <meta property="og:description" content="Descubre el impacto en tu hotel. Simulador gratuito de Go!! Animación.">
+  <meta property="og:image" content="img/show4.jpg">
+  <meta property="og:type" content="website">
   <title>Simulador de Impacto | Go!! Animación</title>
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,6 +39,9 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="img/show4.jpg" alt="Simulador Go!! Animación" loading="lazy">
+    </div>
     <div class="container page-hero-inner">
       <span class="section-eyebrow" style="justify-content:center;">Simulador gratuito</span>
       <h1>Descubre el <span class="tint">impacto</span> en tu hotel</h1>
@@ -120,14 +129,14 @@
             <div class="simulador-resultado">
               <div class="resultado-icon">🎉</div>
               <h3>Tu informe de impacto está listo</h3>
-              <p style="margin-bottom:var(--sp-xl);">Estas son las mejoras estimadas que Go!! Animación puede generar en tu hotel:</p>
+              <p style="margin-bottom:var(--space-6);">Estas son las mejoras estimadas que Go!! Animación puede generar en tu hotel:</p>
               <div class="resultado-metrics">
                 <div class="resultado-metric"><div class="metric-value" id="metricResenas">+35%</div><div class="metric-label">Mejora en reseñas de entretenimiento</div></div>
                 <div class="resultado-metric"><div class="metric-value" id="metricSatisfaccion">+28%</div><div class="metric-label">Aumento en satisfacción del huésped</div></div>
                 <div class="resultado-metric"><div class="metric-value" id="metricFidelizacion">+22%</div><div class="metric-label">Mejora en tasa de repetición</div></div>
               </div>
-              <p style="margin-bottom:var(--sp-xl); font-size:.85rem; color:var(--text-faint);">* Estimaciones basadas en hoteles similares. Los resultados reales pueden variar.</p>
-              <div style="display:flex; gap:var(--sp-md); justify-content:center; flex-wrap:wrap;">
+              <p style="margin-bottom:var(--space-6); font-size:.85rem; color:var(--text-muted);">* Estimaciones basadas en hoteles similares. Los resultados reales pueden variar.</p>
+              <div style="display:flex; gap:var(--space-4); justify-content:center; flex-wrap:wrap;">
                 <a href="contacto.html" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
                 <a href="soluciones.html" class="btn btn-ghost">Ver soluciones</a>
               </div>
