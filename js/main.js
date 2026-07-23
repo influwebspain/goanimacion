@@ -218,5 +218,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // === IMAGE LIGHTBOX MODAL (Full Untruncated View) ===
+  let imageModal = document.querySelector('.image-modal');
+
+  if (!imageModal) {
+    imageModal = document.createElement('div');
+    imageModal.className = 'image-modal';
+    imageModal.innerHTML = `
+      <div class="image-modal-content">
+        <button class="image-modal-close" aria-label="Cerrar imagen">&times;</button>
+        <img src="" alt="" class="image-modal-img">
+        <div class="image-modal-title"></div>
+      </div>
+    `;
+    document.body.appendChild(imageModal);
+  }
+
+  const modalImg = imageModal.querySelector('.image-modal-img');
+  const modalImgTitle = imageModal.querySelector('.image-modal-title');
+  const modalImgCloseBtn = imageModal.querySelector('.image-modal-close');
+
+  function openImageModal(imgSrc, imgAlt) {
+    if (!imgSrc) return;
+    modalImg.src = imgSrc;
+    modalImg.alt = imgAlt || 'Go!! Animación';
+    modalImgTitle.textContent = imgAlt || '';
+    imageModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeImageModal() {
+    imageModal.classList.remove('active');
+    modalImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-video]') || e.target.closest('.video-play-btn')) return;
+
+    const imgTrigger = e.target.closest('.gallery-item img, .svc-card-media img, .modulo-media img, .candybar-subitem img, .candybar-main img, .split-media img, .process-media img');
+    if (imgTrigger) {
+      e.preventDefault();
+      openImageModal(imgTrigger.src, imgTrigger.alt);
+    }
+  });
+
+  if (modalImgCloseBtn) {
+    modalImgCloseBtn.addEventListener('click', closeImageModal);
+  }
+
+  imageModal.addEventListener('click', (e) => {
+    if (e.target === imageModal) {
+      closeImageModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+      closeImageModal();
+    }
+  });
+
 });
+
 
