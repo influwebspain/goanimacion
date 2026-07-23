@@ -43,8 +43,11 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg">
-      <img src="img/show4.jpg" alt="Espectáculo Go!! Animación" loading="lazy">
+    <div class="hero-video-bg">
+      <video autoplay loop muted playsinline poster="img/hero-show.jpg">
+        <source src="video/show.mp4" type="video/mp4">
+        <img src="img/hero-show.jpg" alt="Go!! Animación espectáculos">
+      </video>
     </div>
     <div class="container hero-container">
       <div class="hero-content">
@@ -54,8 +57,11 @@
         </h1>
         <p class="hero-sub">Diseñamos, operamos y optimizamos el ocio de tu hotel para que cada estancia se convierta en un recuerdo — y en una mejor reseña.</p>
         <div class="hero-actions">
-          <a href="soluciones.html" class="btn btn-accent btn-lg">Ver soluciones</a>
-          <a href="simulador.html" class="btn btn-light btn-lg">Probar simulador</a>
+          <button class="btn btn-accent btn-lg" data-video="video/show.mp4">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:1.2em;height:1.2em;"><path d="M8 5v14l11-7z"/></svg> Ver Vídeo Show
+          </button>
+          <a href="soluciones.html" class="btn btn-light btn-lg">Ver soluciones</a>
+          <a href="simulador.html" class="btn btn-ghost btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.4);">Probar simulador</a>
         </div>
       </div>
     </div>
@@ -71,6 +77,86 @@
         <span class="client-item">Zenith Urban</span>
         <span class="client-item">Resort Azul</span>
         <span class="client-item">Cadena Hotelera Sol</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE VÍDEOS DESTACADOS (acttiv.es style) -->
+  <section class="section section-alt" id="videos-demostracion">
+    <div class="container">
+      <div class="section-head-row">
+        <div class="section-header" style="margin-bottom:0;">
+          <span class="section-eyebrow">En Acción</span>
+          <h2 class="section-title">Nuestros espectáculos en vivo</h2>
+          <p class="section-lead">Descubre la energía, la puesta en escena y la calidad que llevamos a cada escenario hotelero.</p>
+        </div>
+        <a href="servicios.html" class="section-link">Ver catálogo completo →</a>
+      </div>
+      <div class="video-section-grid mt-2xl">
+        <div class="video-card reveal">
+          <div class="video-card-thumb" data-video="video/show.mp4">
+            <span class="video-card-badge">Show Escénico</span>
+            <img src="img/hero-show.jpg" alt="Show de Gran Formato" loading="lazy">
+            <button class="video-play-btn" aria-label="Reproducir show">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <div class="video-card-body">
+            <h4>Shows de Gran Formato</h4>
+            <p>Acrobacias, danza y magia con vestuario y puesta en escena espectacular.</p>
+            <button class="btn btn-ghost btn-sm" data-video="video/show.mp4" style="width:100%;">
+              Ver vídeo en directo ↗
+            </button>
+          </div>
+        </div>
+        <div class="video-card reveal">
+          <div class="video-card-thumb" data-video="video/tributo.mp4">
+            <span class="video-card-badge">Música en Vivo</span>
+            <img src="img/show9.jpg" alt="Grupos y Tributos" loading="lazy">
+            <button class="video-play-btn" aria-label="Reproducir tributo">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <div class="video-card-body">
+            <h4>Grupos &amp; Tributos</h4>
+            <p>Música en directo con bandas internacionales y homenajes a grandes artistas.</p>
+            <button class="btn btn-ghost btn-sm" data-video="video/tributo.mp4" style="width:100%;">
+              Ver vídeo en directo ↗
+            </button>
+          </div>
+        </div>
+        <div class="video-card reveal">
+          <div class="video-card-thumb" data-video="video/dj2.mp4">
+            <span class="video-card-badge">Disco Móvil</span>
+            <img src="img/dj.jpg" alt="DJ Live Performance" loading="lazy">
+            <button class="video-play-btn" aria-label="Reproducir DJ live">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <div class="video-card-body">
+            <h4>Disco Móvil &amp; DJ Live</h4>
+            <p>Sesiones de DJ profesionales con iluminación escénica y animación de pista.</p>
+            <button class="btn btn-ghost btn-sm" data-video="video/dj2.mp4" style="width:100%;">
+              Ver vídeo en directo ↗
+            </button>
+          </div>
+        </div>
+        <div class="video-card reveal">
+          <div class="video-card-thumb" data-video="video/coctel.MOV">
+            <span class="video-card-badge">Cócteles &amp; Catering</span>
+            <img src="img/candybar_1.jpg" alt="Cóctel y Catering" loading="lazy">
+            <button class="video-play-btn" aria-label="Reproducir cóctel">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <div class="video-card-body">
+            <h4>Cócteles &amp; Candy Bar</h4>
+            <p>Experiencias gastronómicas, cocktail bar y ambientación musical especial.</p>
+            <button class="btn btn-ghost btn-sm" data-video="video/coctel.MOV" style="width:100%;">
+              Ver vídeo en directo ↗
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -271,21 +357,27 @@
     </div>
   </section>
 
-  <!-- GALERÍA DE SHOWS -->
+  <!-- GALERÍA DE SHOWS Y EXPERIENCIAS -->
   <section class="section section-alt" id="galeria">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">Galería</span>
+        <span class="section-eyebrow">Galería Multimedia</span>
         <h2 class="section-title">Experiencias que hablan por sí solas</h2>
-        <p class="section-lead">Así vivieron nuestros shows y actividades los huéspedes de nuestros hoteles.</p>
+        <p class="section-lead">Puesta en escena, espectáculos nocturnos, animación de día y eventos temáticos en nuestros hoteles partner.</p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item reveal"><img src="img/show2.jpg" alt="Show Go!! Animación" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/show3.jpg" alt="Show Go!! Animación" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/show6.jpg" alt="Show Go!! Animación" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/show8.jpg" alt="Show Go!! Animación" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/show11.jpg" alt="Show Go!! Animación" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/show12.jpg" alt="Show Go!! Animación" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/hero-show.jpg" alt="Show de Gran Formato" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show1.jpg" alt="Espectáculo en vivo" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show2.jpg" alt="Magia y Escenario" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show3.jpg" alt="Producción técnica y luces" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show6.jpg" alt="Acróbatas y Circo" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show8.jpg" alt="Cuerpo de Baile" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show11.jpg" alt="Fiesta temática" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/show12.jpg" alt="Animación nocturna" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/animacion_infantil.jpg" alt="Animación Infantil" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/animacion_infantil2.jpg" alt="Juegos y Miniclub" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/candybar_2.jpg" alt="Candy Bar y Catering" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/dj.jpg" alt="Disco Móvil DJ" loading="lazy"></div>
       </div>
     </div>
   </section>

@@ -159,4 +159,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
   kpiNumbers.forEach(el => kpiObserver.observe(el));
 
+  // === VÍDEO LIGHTBOX MODAL & INTERACTIONS ===
+  let videoModal = document.querySelector('.video-modal');
+
+  if (!videoModal) {
+    videoModal = document.createElement('div');
+    videoModal.className = 'video-modal';
+    videoModal.innerHTML = `
+      <div class="video-modal-content">
+        <button class="video-modal-close" aria-label="Cerrar vídeo">&times;</button>
+        <video controls autoplay playsinline class="video-modal-player"></video>
+      </div>
+    `;
+    document.body.appendChild(videoModal);
+  }
+
+  const modalPlayer = videoModal.querySelector('.video-modal-player');
+  const modalCloseBtn = videoModal.querySelector('.video-modal-close');
+
+  function openVideoModal(videoSrc) {
+    if (!videoSrc) return;
+    modalPlayer.src = videoSrc;
+    modalPlayer.play();
+    videoModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideoModal() {
+    videoModal.classList.remove('active');
+    modalPlayer.pause();
+    modalPlayer.currentTime = 0;
+    modalPlayer.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-video]');
+    if (trigger) {
+      e.preventDefault();
+      const videoSrc = trigger.getAttribute('data-video');
+      openVideoModal(videoSrc);
+    }
+  });
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeVideoModal);
+  }
+
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+      closeVideoModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+      closeVideoModal();
+    }
+  });
+
 });
+
